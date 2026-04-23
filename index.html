@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Notes · Floating note-taking for Chrome</title>
+  <meta name="description" content="A fast, distraction-aware note-taking extension for Chrome. Floats above any page. Markdown, tables, images, Google Drive sync.">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/quicknotes/quick-notes/main/icons/icon128.png">
+  <style>
+    :root {
+      --bg: #1F1F1E;
+      --bg-alt: #2C2C2A;
+      --fg: #e8e6e3;
+      --fg-dim: #c1beb8;
+      --muted: #8a857e;
+      --accent: #d4a85f;
+      --border: #3a3a37;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .logo {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin: 0 0 8px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      font-size: 18px;
+      color: var(--fg-dim);
+      margin: 0 0 24px;
+    }
+    .badges {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .badges img { height: 20px; }
+    .cta {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(212, 168, 95, 0.3);
+    }
+    h2 {
+      font-size: 22px;
+      margin: 48px 0 16px;
+      color: var(--accent);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .feature {
+      background: var(--bg-alt);
+      padding: 16px 18px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .feature strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .feature p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--fg-dim);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { margin: 0 8px; }
+    kbd {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img class="logo" src="https://raw.githubusercontent.com/quicknotes/quick-notes/main/icons/icon128.png" alt="Quick Notes logo">
+      <h1>Quick Notes</h1>
+      <p class="tagline">A fast, distraction-aware note-taking extension for Chrome</p>
+      <div class="badges">
+        <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-d4a85f.svg">
+        <img alt="Manifest V3" src="https://img.shields.io/badge/manifest-v3-4285F4.svg">
+        <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-green.svg">
+        <img alt="No tracking" src="https://img.shields.io/badge/tracking-none-success.svg">
+      </div>
+      <a class="cta" href="https://chromewebstore.google.com/detail/quick-notes/aelknahnnjimdajnjkjochpejeanobik">Install from Chrome Web Store</a>
+    </header>
+
+    <h2>What it is</h2>
+    <p>
+      A floating notepad that lives above any webpage. Press <kbd>Alt</kbd>+<kbd>N</kbd> on
+      any page and start typing — auto-saves as you go. Supports Markdown, images, tables,
+      code blocks, color tags, split view, searchable history, and optional Google Drive
+      sync. 100% local by default. No accounts. No telemetry. No ads.
+    </p>
+
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature"><strong>⚡ Floating panel</strong><p>Drag anywhere, resize freely, persists across tabs.</p></div>
+      <div class="feature"><strong>📝 Markdown preview</strong><p>Headings, tables, code, links, checklists — all roundtrip.</p></div>
+      <div class="feature"><strong>🖼 Images &amp; GIFs</strong><p>Paste or drag-drop. GIFs animate in preview.</p></div>
+      <div class="feature"><strong>↔ Split view</strong><p>Horizontal or vertical, two notes side by side.</p></div>
+      <div class="feature"><strong>🔍 Search</strong><p>Ctrl+F across all notes with snippets.</p></div>
+      <div class="feature"><strong>🎨 Themes</strong><p>Dark &amp; light + custom palette overrides.</p></div>
+      <div class="feature"><strong>☁ Drive sync</strong><p>Opt-in, uses hidden app-data folder. Private.</p></div>
+      <div class="feature"><strong>🔒 Privacy first</strong><p>All data local by default. Zero telemetry.</p></div>
+    </div>
+
+    <h2>Links</h2>
+    <p>
+      <a href="https://github.com/quicknotes/quick-notes">Source code on GitHub</a> ·
+      <a href="https://github.com/quicknotes/quick-notes/issues">Report an issue</a> ·
+      <a href="privacy.html">Privacy policy</a>
+    </p>
+
+    <footer>
+      Made by <a href="https://github.com/mthcht">@mthcht</a> ·
+      <a href="https://github.com/quicknotes/quick-notes/blob/main/LICENSE">MIT licensed</a> ·
+      <a href="privacy.html">Privacy</a>
+    </footer>
+  </div>
+</body>
+</html>

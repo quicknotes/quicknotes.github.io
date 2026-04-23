@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Quick Notes</title>
+  <meta name="description" content="Quick Notes privacy policy. Local-first. Zero tracking. Optional Google Drive sync uses minimum-privilege appdata scope.">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/quicknotes/quick-notes/main/icons/icon128.png">
+  <style>
+    :root {
+      --bg: #1F1F1E;
+      --bg-alt: #2C2C2A;
+      --fg: #e8e6e3;
+      --fg-dim: #c1beb8;
+      --muted: #8a857e;
+      --accent: #d4a85f;
+      --border: #3a3a37;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    h1 {
+      font-size: 30px;
+      margin: 0 0 8px;
+      color: var(--accent);
+    }
+    h2 {
+      font-size: 20px;
+      margin: 32px 0 12px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+    h3 { font-size: 16px; margin: 20px 0 8px; color: var(--fg-dim); }
+    p { margin: 10px 0; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      background: var(--bg-alt);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    th { color: var(--accent); font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+    code {
+      background: var(--bg-alt);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 13px;
+    }
+    .muted { color: var(--muted); font-size: 14px; }
+    .summary {
+      background: var(--bg-alt);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      margin: 16px 0 32px;
+    }
+    nav { margin-bottom: 32px; }
+    nav a { margin-right: 16px; }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="./">← Home</a>
+      <a href="https://github.com/quicknotes/quick-notes">GitHub</a>
+    </nav>
+
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: April 22, 2026</p>
+
+    <div class="summary">
+      <strong>The short version:</strong> Quick Notes is a local-first Chrome extension.
+      By default, all your data stays on your device. The extension makes zero network
+      requests. Optional Google Drive sync is opt-in and uses a minimum-privilege scope
+      (<code>drive.appdata</code>) that cannot access your other Drive files.
+    </div>
+
+    <h2>What data the extension handles</h2>
+    <p>Quick Notes handles the following data <strong>only on your local device</strong>, never on a remote server owned by the developer:</p>
+    <ul>
+      <li><strong>Notes content</strong> — the text, images, and formatting you type into notes.</li>
+      <li><strong>History</strong> — records of paste / selection / URL-capture operations you trigger (capped at 200 entries).</li>
+      <li><strong>Settings</strong> — your configured themes, URL-pattern rules, per-site default notes, panel opacity, and shape preferences.</li>
+      <li><strong>Pasted page content</strong> — if you click the "Paste clipboard," "Insert URL," or "Insert selection" buttons, the content goes into your active note.</li>
+    </ul>
+    <p>Storage is in Chrome's sandboxed <code>chrome.storage.local</code> API, local to your browser profile.</p>
+
+    <h2>What the extension does NOT do</h2>
+    <ul>
+      <li>Does <strong>not</strong> collect, transmit, or share notes with the developer, analytics services, advertisers, or any third party.</li>
+      <li>Does <strong>not</strong> contain tracking, telemetry, or remote logging.</li>
+      <li>Does <strong>not</strong> read page content automatically. Page content is captured only when you click a capture button.</li>
+      <li>Makes <strong>no network requests at all</strong>, unless you opt into Google Drive sync.</li>
+    </ul>
+
+    <h2>Optional: Google Drive sync</h2>
+    <p>If you <strong>explicitly</strong> enable Drive sync in the options page:</p>
+    <ul>
+      <li>You grant the extension the <code>https://www.googleapis.com/auth/drive.appdata</code> scope only. This scope allows reading and writing files in a hidden per-app folder (the "appDataFolder") in your Google Drive.</li>
+      <li>This folder is <strong>not visible</strong> in your regular Drive UI and cannot be accessed by any other application.</li>
+      <li>The extension <strong>cannot</strong> see, read, or modify your other Drive files. The <code>drive.appdata</code> scope is specifically sandboxed.</li>
+      <li>Your notes, images, and settings are packaged as a single JSON file and uploaded to this private folder, then downloaded when syncing from another device.</li>
+      <li>Sync frequency is configurable (manual, or every 5/15/30/60 min). You can sign out at any time.</li>
+    </ul>
+    <p>No other Google APIs or services are contacted.</p>
+
+    <h2>Third-party services</h2>
+    <p>Quick Notes uses exactly one optional third-party service:</p>
+    <ul>
+      <li><strong>Google Drive</strong> (only when sync is enabled). Its own privacy policy applies: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</li>
+    </ul>
+    <p>No other third parties are involved.</p>
+
+    <h2>Permissions explained</h2>
+    <table>
+      <thead><tr><th>Permission</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><code>storage</code></td><td>Save notes and settings in <code>chrome.storage.local</code>.</td></tr>
+        <tr><td><code>scripting</code></td><td>Inject the floating panel into the active tab on user command.</td></tr>
+        <tr><td><code>clipboardRead</code></td><td>The Paste button reads the clipboard — only when you click it.</td></tr>
+        <tr><td><code>contextMenus</code></td><td>Right-click menu entries for sending selected text / URLs to notes.</td></tr>
+        <tr><td><code>identity</code></td><td>Google sign-in (only if you enable Drive sync).</td></tr>
+        <tr><td><code>alarms</code></td><td>Schedule periodic auto-sync to Drive (only if enabled).</td></tr>
+        <tr><td><code>&lt;all_urls&gt;</code></td><td>So the floating panel can appear on any page. No page content is read unless you click Insert URL or Insert Selection.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Exporting and deleting your data</h2>
+    <h3>Export</h3>
+    <p>At any time, export all your local data as a JSON file via the options page's Backup &amp; Restore section. This file is saved via your browser's normal download flow — the extension does not upload it anywhere.</p>
+    <h3>Delete (local)</h3>
+    <p>Options page → Storage → "Reset everything." Or uninstall the extension.</p>
+    <h3>Delete (Google Drive, if sync was enabled)</h3>
+    <p>Options → Google Drive sync → Sign out. Then visit <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, find Quick Notes, and revoke access.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Quick Notes is not directed at children under 13.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the new version will be committed to the public repository at
+      <a href="https://github.com/quicknotes/quick-notes/blob/main/PRIVACY.md">github.com/quicknotes/quick-notes/blob/main/PRIVACY.md</a> with a new "Last updated" date, and this page will be updated accordingly.</p>
+
+    <h2>Contact</h2>
+    <p>Open an issue at <a href="https://github.com/quicknotes/quick-notes/issues">github.com/quicknotes/quick-notes/issues</a>.</p>
+
+    <footer>
+      <strong>Developer</strong>: <a href="https://github.com/mthcht">@mthcht</a> ·
+      <strong>Source</strong>: <a href="https://github.com/quicknotes/quick-notes">github.com/quicknotes/quick-notes</a> ·
+      <strong>License</strong>: MIT
+    </footer>
+  </div>
+</body>
+</html>
